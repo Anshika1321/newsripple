@@ -1,70 +1,129 @@
-# Getting Started with Create React App
+# NewsRipple - React News App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+NewsRipple is a modern, responsive, single-page news application built using React.js. It displays the latest headlines across various categories using the NewsAPI.
 
-## Available Scripts
+## 🚀 Features
 
-In the project directory, you can run:
+* Top Headlines: Displays real-time news headlines.
 
-### `npm start`
+* Responsive Design: Optimized for mobile, tablet, and desktop.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+* Multiple Categories: Business, Entertainment, Health, Science, Sports, Technology.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+* Pagination: Navigate through multiple pages of articles.
 
-### `npm test`
+* Scroll to Top: Smooth button for quick scroll.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+* Loading State: Spinner for API calls.
 
-### `npm run build`
+* SEO-Friendly: Dynamic page titles based on category.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+* Error Handling: Graceful fallback for API failures.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 📁 Folder Structure
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+<pre>src/
+├── components/
+│   ├── Navbar.js
+│   ├── News.js
+│   ├── NewsItem.js
+│   ├── ScrollButton.js
+│   └── Spinner.js
+├── App.js
+├── App.css
+├── index.js
+├── index.css
+└── logo.svg</pre>
 
-### `npm run eject`
+## 🛠️ Installation & Setup
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+1. Prerequisites
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+* Node.js (v14+)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+* npm or yarn
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+* News API key from newsapi.org
 
-## Learn More
+2. Clone the Repository
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+<pre>git clone https://github.com/Anshika1321/newsripple.git
+cd newsripple</pre>
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+3. Install Dependencies
 
-### Code Splitting
+<pre>npm install</pre>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+4. Environment Variable Setup
 
-### Analyzing the Bundle Size
+Create a .env file in the root directory and add your News API key:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+<pre>REACT_APP_NEWS_API_KEY=your_api_key_here</pre>
 
-### Making a Progressive Web App
+5. Start the Application
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+<pre>npm start</pre>
 
-### Advanced Configuration
+* The app will run on ```http://localhost:3000```.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## 🔧 Component Overview
 
-### Deployment
+### 1. App.js
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+* Main application component.
 
-### `npm run build` fails to minify
+* Sets up routing with react-router-dom.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+* Renders Navbar, ScrollButton, and News components.
+
+### 2. Navbar.js
+
+* Navigation bar using Bootstrap.
+
+* Contains links to all categories (uses Link from react-router-dom).
+
+### 3. News.js
+
+* Fetches news articles based on category and API key.
+
+* Displays articles using NewsItem.
+
+* Manages pagination and loading states.
+
+### 4. NewsItem.js
+
+* Displays a single news article card (title, description, source, link).
+
+* ScrollButton.js
+
+* Button that appears on scroll to let users quickly scroll back to top.
+
+### 5. Spinner.js
+
+* Displays loading spinner while data is being fetched.
+
+## 🎨 Styling
+
+* App.css: Contains custom styles like scroll button, card hover, and responsive fixes.
+
+* Bootstrap: Imported via npm for pre-built components and layout grid.
+
+## 📦 Technologies Used
+
+* React.js
+
+* React Router DOM
+
+* Bootstrap
+
+* PropTypes
+
+* NewsAPI
+
+## 🤝 Acknowledgements
+
+* NewsAPI — For real-time news data.
+
+* Bootstrap — For responsive UI.
+
+* React Router — For navigation.
